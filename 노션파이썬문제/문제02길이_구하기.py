@@ -6,3 +6,11 @@ count = 0
 for i in word:
     count += 1
 print(count)
+
+
+# 강사님 풀이
+word = 'happy!'
+count = 0
+for char in word:
+    count = count + 1
+print(count)
