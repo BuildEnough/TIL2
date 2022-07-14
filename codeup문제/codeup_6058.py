@@ -6,3 +6,6 @@ a, b = map(int, input().split())
 a = bool(a)
 b = bool(b)
 
+print(not(a or b))
+
+# 솔직히 이해 잘 안감

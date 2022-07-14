@@ -12,3 +12,5 @@ for i in m_list:
         if i == j:
             count += 1
 print(count)
+
+# 강사님 풀이

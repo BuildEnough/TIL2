@@ -9,3 +9,20 @@ for i in word:
     count += 1
     if i == 'a':
         print(count, end =" ")
+
+
+# 강사님 풀이
+word = 'banana'
+result = []
+for idx in range(len(word)):
+    if word[idx] == 'a':
+        result.append(idx)
+print(result)
+
+
+word = 'banana'
+result = []
+for idx in range(len(word)):
+    if word[idx] == 'a':
+        if word[idx] == 'a':
+            print(idx, end ='')

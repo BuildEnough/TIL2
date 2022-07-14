@@ -16,3 +16,22 @@ for i in word:
     elif i != 'a':
         print(-1)
         break
+
+# 강사님 풀이
+word = 'banana'
+
+# 문자로 순회하는 것이 아니라
+# 인덱스로 접근
+# 원하는 숫자? 0 1 2 3 4 5
+# 얻는 방법은? range(len(word)) -> range(6)
+for idx in range(len(word)):
+    # print(word[idx])
+    # 알파벳이 a일때
+    if word[idx] == 'a':
+        print(idx)
+        break
+# for문을 다 돌았다는 뜻은
+# 한번도 break에 안걸렸다
+# 즉, a는 없었다
+else:
+    print(-1)
