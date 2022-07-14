@@ -2,3 +2,5 @@
 # 단, 3항 연산을 사용한다.
 
 a, b, c = map(int, input().split())
+
+print((a if a<b else b) if ((a if a<b else b)<c) else c)
