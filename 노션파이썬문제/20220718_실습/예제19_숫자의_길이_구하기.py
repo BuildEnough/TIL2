@@ -12,3 +12,28 @@ while number > 0:
     number = number // 10
     output += 1
 print(output)
+
+
+# 강사님 해설
+number = 0
+
+# 1. 123
+cnt = 0
+# 몫이 0이 되면 종료해야하니까
+# int : 0이 아닌 다른 수이면 무조건 True!
+# while number:
+while number != 0:
+    # number = number // 10
+    number //= 10
+    number += 1
+
+print(cnt)
+
+
+# 2. 문자열로 형변환
+# print(len(str(number)))
+
+# 3. log
+import math
+number = 123456
+print(int(math.log(number, 10)) + 1)
