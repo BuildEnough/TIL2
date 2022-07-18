@@ -3,10 +3,9 @@
 
 # ord 표 봐야함
 
-# alpha = ord(input())
-# munja = 
+a = ord(input())
+m = ord('a')
 
-# while alpha > munja:
-
-
-# print()
+while a >= m:
+    print(chr(m), end=' ')
+    m += 1
