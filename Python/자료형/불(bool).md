@@ -71,3 +71,21 @@ False
 참
 ```
 - if 문에서 [1, 2, 3]은 요소값이 있는 리스트이기 때문에 `참`
+
+```python
+>>> bool('python')
+True
+```
+- 'python'은 문자열이 아니므로 bool 연산의 결과로 `True`를 돌려줌
+
+```python
+>>> bool([1,2,3])
+True
+>>> bool([])
+False
+>>> bool(0)
+False
+>>> bool(3)
+True
+```
+- bool 예시
