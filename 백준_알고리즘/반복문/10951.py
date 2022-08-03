@@ -1,5 +1,9 @@
+import sys
+sys.stdin = open("10951.txt")
+
 while True:
-    A, B = map(int, input().split())
-    if A <= 0 and B >= 10:
+    try:
+        A, B = map(int, input().split())
+        print(A+B)
+    except:
         break
-    print(A + B)
