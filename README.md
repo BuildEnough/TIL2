@@ -8,7 +8,6 @@
 
 [Python](https://github.com/BuildEnough/TIL/tree/master/Python)
 
-[백준 문제풀이](https://github.com/BuildEnough/TIL/tree/master/%EB%B0%B1%EC%A4%80_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 😎[정보처리기사](https://github.com/BuildEnough/TIL/blob/master/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC/%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC%20%EC%8B%A4%EA%B8%B0.md)
 
