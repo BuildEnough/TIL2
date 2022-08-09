@@ -1,7 +1,12 @@
 import sys
 sys.stdin = open('2908.txt')
 
-n, m = map(int, input().split())
+n, m = input().split()
 
-print(n)
-print(m)
+n = n[::-1]
+m = m[::-1]
+
+if int(n) > int(m):
+    print(n)
+else:
+    print(m)
