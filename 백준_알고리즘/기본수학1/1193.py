@@ -1,33 +1,20 @@
 import sys
 sys.stdin = open('1193.txt')
 
-# 1/1: 1 => 2
-# 1/2: 2 => 3
-# 2/1: 3 => 3
-# 3/1: 4 => 4
-# 2/2: 5 => 4
-# 1/3: 6 => 4
-# 1/4: 7
 
-# 분자와 분모의 합이 1씩 커질때 마다, 분자 <-> 분모
+# 홀: 분자 1씩 감소, 분모 1씩 증가
+# 짝: 분자 1씩 증가, 분모 1씩 감소
 
-x = int(input())
-num_list = []
+# [1] [2, 3]     [4,   5,   6]   [7, 8, 9, 10]
+# [1] [1/2, 2/1] [3/1, 2/2, 1/3]
+# [홀] [짝]       [홀]
 
-num = 0
-num_count = 0
+# 13이 입력되면 (1+2+3+4 = 10) <= 13 <= (1+2+3+4+5 = 15)
+# 사이에 존재한다
 
-while num_count < x:
-    num += 1
-    num_count += num
+x = 13
 
-num_count -= num
+x_range = 0
 
-if num % 2 == 0:
-    i = x - num_count
-    j = num - i + 1
-else:
-    i = num - (x - num_count) + 1
-    j = x - num_count
-
-print(f"{i}/{j}")
+while True:
+    if 
