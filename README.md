@@ -13,6 +13,8 @@
 
 [백준](https://github.com/BuildEnough/TIL/tree/master/%EB%B0%B1%EC%A4%80_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
+[SDLC](https://github.com/BuildEnough/TIL/tree/master/SQLD)
+
 👀[Markdown 정리](https://github.com/BuildEnough/TIL/blob/master/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4.md)
 
 👀[티스토리 블로그](https://buildenough.tistory.com/)
