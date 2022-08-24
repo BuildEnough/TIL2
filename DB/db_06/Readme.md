@@ -46,14 +46,25 @@ python manage.py migrate
 
 
 ```python
-Director.objects.create(name='봉준호', debut='1993-01-01', country='KOR')
-Director.objects.create(name='김한민', debut='1999-01-01', country='KOR')
-Director.objects.create(name='최동훈', debut='2004-01-01	', country='KOR')
-Director.objects.create(name='이정재', debut='2022-01-01', country='KOR')
-Director.objects.create(name='이경규', debut='1992-01-01', country='KOR')
-Director.objects.create(name='한재림', debut='2005-01-01', country='KOR')
-Director.objects.create(name='Joseph Kosinski', debut='1999-01-01', country='KOR')
-Director.objects.create(name='김철수', debut='2022-01-01', country='KOR')
+Director.objects.create(name="봉준호",debut="1993-01-01",country="KOR")
+Director.objects.create(name="김한민",debut="1999-01-01",country="KOR")
+Director.objects.create(name="최동훈",debut="2004-01-01",country="KOR")
+Director.objects.create(name="이정재",debut="2022-01-01",country="KOR")
+Director.objects.create(name="이경규",debut="1992-01-01",country="KOR")
+Director.objects.create(name="한재림",debut="2005-01-01",country="KOR")
+Director.objects.create(name="Joseph Kosinski",debut="1999-01-01",country="KOR")
+Director.objects.create(name="김철수",debut="2022-01-01",country="KOR")
+```
+
+```python
+Director.objects.create(name="봉준호",debut="1993-01-01",country="KOR")
+Director.objects.create(name="김한민",debut="1999-01-01",country="KOR")
+Director.objects.create(name="최동훈",debut="2004-01-01",country="KOR")
+Director.objects.create(name="이정재",debut="2022-01-01",country="KOR")
+Director.objects.create(name="이경규",debut="1992-01-01",country="KOR")
+Director.objects.create(name="한재림",debut="2005-01-01",country="KOR")
+Director.objects.create(name="Joseph Kosinski",debut="1999-01-01",country="KOR")
+Director.objects.create(name="김철수",debut="2022-01-01",country="KOR")
 ```
 
 ### 4. `인스턴스 조작` 을 활용하여`Genre` 테이블에 아래 데이터를 추가하는 코드를 작성하세요.
@@ -74,24 +85,11 @@ Director.objects.create(name='김철수', debut='2022-01-01', country='KOR')
 > 
 
 ```python
-Genre.objects.create(title='액션')
-genre.save()
-Genre.objects.create(title='드리마')
-genre.save()
-Genre.objects.create(title='사극')
-genre.save()
-Genre.objects.create(title='범죄')
-genre.save()
-Genre.objects.create(title='스릴러')
-genre.save()
-Genre.objects.create(title='SF')
-genre.save()
-Genre.objects.create(title='무협')
-genre.save()
-Genre.objects.create(title='첩보')
-genre.save()
-Genre.objects.create(title='재난')
-genre.save()
+genres = ["액션","드라마","사극","범죄","스릴러","SF","무협","첩보","재난"]
+for title_ in genres:
+    genre = Genre()
+    genre.title = title_
+    genre.save()
 ```
 
 ### 5. Queryset 메소드 `all` 을 활용해서 `Director` 테이블의 모든 데이터를 출력하는 코드를 작성하세요.
@@ -114,7 +112,11 @@ Joseph Kosinski 1999-01-01 00:00:00 KOR
 > 
 
 ```python
-
+genres = ["액션","드라마","사극","범죄","스릴러","SF","무협","첩보","재난"]
+for title_ in genres:
+    genre = Genre()
+    genre.title = title_
+    genre.save()
 ```
 
 ### 6. Queryset 메소드 `get` 을 활용해서 `Director` 테이블에서 `id` 가 1인 데이터를 출력하는 코드를 작성하세요.
@@ -127,10 +129,14 @@ Joseph Kosinski 1999-01-01 00:00:00 KOR
 ```
 
 > 코드 작성
-> 
+> 봉준호 1993-01-01 00:00:00 KOR
 
 ```python
-
+genres = ["액션","드라마","사극","범죄","스릴러","SF","무협","첩보","재난"]
+for title_ in genres:
+    genre = Genre()
+    genre.title = title_
+    genre.save()
 ```
 
 ### 7. Queryset 메소드 `get` 을 활용해서 `Director` 테이블에서 `country` 가 USA인 데이터를 출력하는 코드를 작성하세요.
@@ -139,7 +145,14 @@ Joseph Kosinski 1999-01-01 00:00:00 KOR
 > 
 
 ```python
-
+봉준호 1993-01-01 00:00:00 KOR
+김한민 1999-01-01 00:00:00 KOR
+최동훈 2004-01-01 00:00:00 KOR
+이정재 2022-01-01 00:00:00 KOR
+이경규 1992-01-01 00:00:00 KOR
+한재림 2005-01-01 00:00:00 KOR
+Joseph Kosinski 1999-01-01 00:00:00 KOR
+김철수 2022-01-01 00:00:00 KOR
 ```
 
 ### 8. 위 문제에서 오류가 발생합니다. 출력된 오류 메세지와 본인이 생각하는 혹은 찾은 오류가 발생한 이유를 작성하세요.
@@ -171,7 +184,10 @@ Joseph Kosinski 1999-01-01 00:00:00 USA
 > 
 
 ```python
-
+director = Director.objects.get(name = "Joseph Kosinski") 
+director.country = "USA"
+director.save()
+print(director.name,director.debut,director.country)
 ```
 
 ### 10. Queryset 메소드 `get` 을 활용해서 `Director` 테이블에서 `country` 가 KOR인 데이터를 출력하는 코드를 작성하세요.
@@ -218,7 +234,10 @@ Joseph Kosinski 1999-01-01 00:00:00 USA
 > 
 
 ```python
-
+director = Director.objects.get(name = "Joseph Kosinski") 
+director.country = "USA"
+director.save()
+print(director.name,director.debut,director.country)
 ```
 
 ### 13. 본인이 생각하는 혹은 찾은 `get` 과 `filter` 의 차이를 작성하세요.
@@ -233,5 +252,8 @@ Joseph Kosinski 1999-01-01 00:00:00 USA
 > 
 
 ```python
-
+director = Director.objects.get(name = "Joseph Kosinski") 
+director.country = "USA"
+director.save()
+print(director.name,director.debut,director.country)
 ```
