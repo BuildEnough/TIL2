@@ -1,3 +1,5 @@
+#https://www.acmicpc.net/problem/2754
+
 import sys
 sys.stdin = open('학점계산.txt')
 

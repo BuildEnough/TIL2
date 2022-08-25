@@ -1,3 +1,5 @@
+#https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PyTLqAf4DFAUq
+
 import sys
 sys.stdin = open('초심자의_회문_검사.txt')
 

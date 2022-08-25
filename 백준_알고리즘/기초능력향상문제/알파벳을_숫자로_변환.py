@@ -1,3 +1,5 @@
+# https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5QLGxKAzQDFAUq
+
 import sys
 sys.stdin = open('알파벳을_숫자로_변환.txt')
 

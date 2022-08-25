@@ -1,3 +1,5 @@
+#https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18_yw6I9MCFAZN
+
 import sys
 sys.stdin = open('새로운_불면증_치료법.txt')
 
