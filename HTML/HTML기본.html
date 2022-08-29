@@ -1,0 +1,62 @@
+<HTML>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML 기본</title>
+  </head>
+  <body>
+    code {
+      padding: 0.25rem;
+      background-color: #F1F1F1;
+      border-radius: 5px;
+      font-family: "Consolas", "Sans Mono", "Courier", "monospace";
+      font-size: 0.75rem;
+      }
+
+
+    <h1>HTML</h1>
+      <p>HTML(Hypertext Markup Language)은 웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드</p>
+      <p>&lt;!DOCTYPE html&gt; — doctype. 아주 오래전 HTML 이 막 나왔을 때 (1991년 2월쯤),
+      doctype은 (자동 오류 확인이나 다른 유용한 것을 의미하는) good HTML로 인정받기 위해
+      HTML 페이지가 따라야 할 일련의 규칙으로의 연결통로로써 작동하는 것을 의미하였습니다.
+      하지만, 최근에는 아무도 그런 것들에 대해 신경쓰지 않으며 그저 모든 것이 올바르게 동작하게 하기 위해 포함되어야 할 역사적인 유물일 뿐입니다.
+      지금은, 그게 알아야 할 전부 입니다.</p>
+      <p>&lt;html&gt;&lt;/&html&gt; — &lt;html&gt; 요소. 이 요소는 페이지 전체의 컨텐츠를 감싸며, 루트(root) 요소라고도 합니다.</p>
+      <p>&lt;body&gt;&lt;/body&gt; — &lt;body&gt; 요소. 이것은 페이지에 방문한 모든 웹 사용자들에게 보여주길 원하는 모든 컨텐트를 담고 있으며,
+        그것이 텍스트일 수도, 이미지, 비디오, 게임, 플레이할 수 있는 오디오 트랙이나 다른 무엇이든 될 수 있습니다</p>
+      <p>&lt;meta charset="utf-8"&gt; — 이 요소는 문서가 사용해야 할 문자 집합을 utf-8으로 설정합니다
+        (utf-8 문자 집합에는 인간의 방대한 주류 기록언어에 있는 대부분의 문자가 포함되어 있습니다).
+        본질적으로 여러분이 사용할 수 있는 어떠한 문자 컨텐트도 다룰 수 있습니다.
+        이 문자 집합을 설정하지 않을 이유가 없으며, 그렇게 설정하면 나중에 발생할 수 있는 일부 문제를 피할 수 있습니다.</p>
+      <p>&lt;title&gt;&lt;/title&gt; — &lt;title&gt; 요소. 이 요소는 페이지의 제목을 설정하는 것으로 페이지가 로드되는 브라우저의 탭에 이 제목이 표시됩니다.
+        이 요소는 북마크나 즐겨찾기에서 페이지를 설명하는 것으로도 사용됩니다.</p>
+    <h1>IMAGE</h1>
+      <p><img src="이미지.JPG" alt="alt 대체 텍스트"></p>
+      <p>src 속성: 이미지가 나타나야 할 위치에 이미지를 끼워 넣음, 이미지 파일의 경로를 포함</p>
+      <p>alt(alternative) 속성: 1. 무언가 잘못되어서 이미지를 표시할 수 없는 경우 2. 시각 장애자인 경우 alt 텍스트(대체 텍스트)를 읽어주는 스크린 리더라는 도구를 자주 사용</p>
+    <h1>제목</h1>
+      <p>제목 요소는 내용의 특정 부분이 제목 또는 내용의 하위 제목임을 구체화 할 수 있게 해줌</p>
+      <p>HTML 은 여섯 단계의 제목을 갖고, &lt;h1&gt;–&lt;h6&gt; 주로 3-4 만을 주로 사용함</p>
+      <p>&lt;p&gt;요소: 문자의 문단을 포함하기 위한 것, 일반적인 문자 내용을 나타낼 때 많이 사용함</p>
+    <h1>목록</h1>
+      <p>&lt;ul&gt;: 순서가 없는 목록</p>
+      <p>&lt;ol&gt;: 순서가 있는 목록</p>
+      <p>&lt;li&gt;: 목록의 각 항목</p>
+      <ol>
+        <li>1</li>
+        <li>2</li>
+      </ol>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+    <h1>연결</h1>
+      <p>&lt;a(anchor)&gt;: 문장의 어떠한 단어를 링크로 만들기 위해 필요함</p>
+      <ol>
+        <li>문자 선택</li>
+        <li>문자를 a태그로 감싸줌</li>
+        <li>&lt;a&gt 요소에 href 속성을 줌</li>
+        <li>herf 속성 값에 원하는 주소를 넣어줌</li>
+      </ol>
+      <a href="https://www.google.co.kr/">구글</a>
+  </body>
+</HTML>
