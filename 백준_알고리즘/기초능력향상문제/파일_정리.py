@@ -5,7 +5,9 @@ sys.stdin = open('파일_정리.txt')
 
 for i in range(int(input())):
     file_ = input()
-    
+    file_name = file_.lstrip('.')[1]
+    print(file_name)
+
 
 
 
