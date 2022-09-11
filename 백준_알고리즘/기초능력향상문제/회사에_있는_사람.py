@@ -7,12 +7,17 @@ n = int(input())
 
 company = dict()
 
-for i in range(n):
+for _ in range(n):
     name, work = input().split()
     
     if work == 'enter':
         company[name] = 'enter'
-
     else:
-        company[name] = 'lever'
-        
+        del company[name]
+
+
+result = sorted(company.keys(), reverse=True)
+
+for i in result:
+    print(i)
+    
