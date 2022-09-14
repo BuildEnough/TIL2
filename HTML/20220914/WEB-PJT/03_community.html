@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>홈페이지</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 </head>
 <body>
 <div>
@@ -23,13 +24,12 @@
       <div class="collapse navbar-collapse text-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="02_home.html">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-muted" href="03_community.html">Community</a>
           </li>
           <li class="nav-item">
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">login</button> -->
             <a class="nav-link text-muted" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</a>
           </li>
         </ul>
@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container d-none d-lg-table">
 
     <h2 class="fs-10 text-center m-1 p-4">
       Community
@@ -90,7 +90,7 @@
         </ul>
       </aside>
       
-      <table class="table table-striped d-none d-lg-table" width="83%">
+      <table class="table table-striped" width="83%">
         <thead>
           <tr>
             <th scope="col" class="bg-dark text-white">영화 제목</th>
@@ -133,9 +133,11 @@
         </tbody>
       </table>
     </div>
+    <div class="d-grid gap-2 d-flex justify-content-end">
+      <a class="btn btn-primary" href="04_form.html" role="button">글 작성하기</a>
     </div>
-    <!-- </div> -->
-    <div class="d-flex justify-content-center flex-column" style="width:90%; margin:auto;">
+    </div>
+    <div class="d-flex justify-content-center flex-column" style="width:90%; margin:25px auto;">
     <aside class="d-table d-lg-none " style="width: 100%;">
       <ul class="list-group">
         <li class="list-group-item text-primary">Boxoffice</li>
@@ -146,7 +148,6 @@
     </aside>
     
     <div class="d-lg-none d-table">
-
       <div class="card-group" style="margin: 20px 0; width: 100%;">
         <div class="card">
           <div class="card-body">
@@ -156,17 +157,19 @@
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie1.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
 
-      <div class="card-group" style="margin: 20px 0; width: 100%;">
+      <div class="card-group" style="margin: 20px 0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Best Movie Ever</h5>
+            <h5 class="card-title">Best</h5>
             <p class="card-text">Great Movie Title</p>
             <p>user</p>
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie2.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
       
       <div class="card-group" style="margin: 20px 0">
@@ -178,6 +181,7 @@
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie3.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
 
       <div class="card-group" style="margin: 20px 0">
@@ -189,30 +193,46 @@
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie4.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
   
-      <div class="card-group" style="margin: 20px 0; width: 100%;">
+      <div class="card-group" style="margin: 20px 0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Best Movie Ever</h5>
+            <h5 class="card-title">Best</h5>
             <p class="card-text">Great Movie Title</p>
             <p>user</p>
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie5.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
 
-      <div class="card-group" style="margin: 20px 0; width: 100%;">
+      <div class="card-group" style="margin: 20px 0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Best Movie Ever</h5>
+            <h5 class="card-title">Best</h5>
             <p class="card-text">Great Movie Title</p>
             <p>user</p>
             <p>1 minute ago</p>          
           </div>
         </div>
+        <div><img src="movie6.jpg" class="card-img-top" alt="..." style="width:150px"></div>
       </div>
+      <div class="d-grid gap-2 d-flex justify-content-end">
+        <a class="btn btn-primary" href="04_form.html" role="button">글 작성하기</a>
+      </div>
+        </div>
+        
+
+      </div>
+    </div>
   </div>
+</div>
+  </div>
+
+
+
 
 
   <br>
@@ -224,6 +244,7 @@
     <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
   
+
   <footer class="py-5 bg-white">
     <div class="container">
       <p class="m-0 text-center">Web-bootstrap PJT, by 김병우,최준우</p>
