@@ -2,3 +2,4 @@
 
 import sys
 sys.stdin = open('덩치.txt')
+
