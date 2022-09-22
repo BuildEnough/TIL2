@@ -1,0 +1,100 @@
+.navigator{
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 70px;
+  background-color: #00a4e4 !important;
+  flex-flow: row nowrap;
+}
+.nav_area{
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.icon{
+  float: left;
+}
+.text{ 
+  font-weight: bold;
+  font-style: normal;
+  margin-left: 45px;
+  display: inline-block;
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav_group{
+  margin-left: 30px;
+  float: right;
+}
+.nav_link{
+  display: inline-block;
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav_group [class^=nav_link]:before{
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: white;
+  vertical-align: top;
+}
+
+.main{
+  height: auto !important;
+}
+.numberdiv{
+  width:60%;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.top-div{
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  box-sizing: border-box;
+  line-height: 30px;
+  background-color: #bc0024;
+  color:white;
+}
+
+.top-div-name{
+  font-weight: bold;
+  font-size: 15px;
+  padding-left:10px;
+
+}
+.numberset{
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+.lottocircle{
+    display: table;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-size:15px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+.value{
+    display:table-cell;
+    vertical-align: middle;
+}

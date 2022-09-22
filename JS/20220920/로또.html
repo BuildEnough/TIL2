@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 생성기</title>
+  <link rel="stylesheet" href="index_css.css">
+</head>
+<body>
+  <nav class="navigator">
+      <div class="nav_area">
+          <a class="icon" href="/">
+              <i class="text">오늘의 번호</i> 
+          </a>
+          <div class="nav_group">
+              <a class="nav_link" href="/auto/">자동번호</a>
+              <a class="nav_link" href="/semiauto/">반자동번호</a>
+          </div>
+      </div>
+  </nav>
+
+  <div class="main">
+    <div class="numberdiv">
+        <div class="top-div">
+            <div class="top-div-name">오늘의번호</div>
+        </div>
+        <div class="numberset">
+            <div class="lottocircle"><p class="value">5</p></div>
+            <div class="lottocircle"><p class="value">10</p></div>
+            <div class="lottocircle"><p class="value">21</p></div>
+            <div class="lottocircle"><p class="value">37</p></div>
+            <div class="lottocircle"><p class="value">41</p></div>
+            <div class="lottocircle"><p class="value">42</p></div>
+        </div>
+    </div>
+</div>
+
+<script> 
+  var number = document.getElementsByClassName("lottocircle");
+  for (var i = 0 ; i < number.length ; i++) {
+      if(parseInt(number[i].textContent)>=40){
+          number[i].style="background-color:#8b00ff";
+      }else if(parseInt(number[i].textContent)>=30){
+          number[i].style="background-color:#146eb4";
+      }else if(parseInt(number[i].textContent)>=20){
+          number[i].style="background-color:#c1d82f";
+      }else if(parseInt(number[i].textContent)>=10){
+          number[i].style="background-color:#fbb034"; 
+      }   
+      else{
+          number[i].style="background-color:#ff0000";  
+      }
+          
+      
+  }
+</script>
+</body>
+</html>

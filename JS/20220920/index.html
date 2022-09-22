@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트</title>
+  <link rel="stylesheet" href="index_css.css">
+</head>
+<body class="vsc-initialized">
+  <div id="result">
+    <h1 class="text-center">로또 추첨번호</h1>
+    <button>추천 번호</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const button = document.querySelector("button");
+    button.addEventListener("click", function () {
+
+      const ballContainer = document.createElement("div");
+      ballContainer.classList.add("ball-container");
+
+      const randomNum = _.sampleSize(_.range(1, 46), 6);
+      console.log(randomNum);
+      for (i of randomNum) {
+        console.log(i);
+        const ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.innerText = i;
+        if (i > 40) {
+          ball.classList.add("ball-greencolor");
+        } else if (i > 30) {
+          ball.classList.add("ball-graycolor");
+        } else if (i > 20) {
+          ball.classList.add("ball-redcolor");
+        } else if (i > 10) {
+          ball.classList.add("ball-bluecolor");
+        } else if (i > 0) {
+          ball.classList.add("ball-yellowcolor");
+        }
+        ballContainer.appendChild(ball);
+      }
+
+      const result = document.querySelector("#result");
+      result.appendChild(ballContainer);
+    });
+  </script>
+
+
+</body>
+</html>
