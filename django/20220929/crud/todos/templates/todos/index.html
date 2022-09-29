@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>index.html</h1>
+
+  <!-- 사용자에게 정보를 입력받을 때 -->
+  <!-- form 태그를 사용해야 한다.-->
+  <form action="{% url 'todos:create' %}">
+    <!-- action: 어떤 url을 요청할지 -->
+    <!-- create라는 주소를 요청할건데 url naming을 사용함-->
+    <!-- url naming은 for과 if문처럼 \{% %\}를 사용하고 -->
+    <!-- \{% url '' %\} url ''를 넣어서 url ''를 찾아달라고 하는 것 -->
+    <!-- 여기선 create라는 이름을 가진 주소를 요청해달라는 의미 -->
+    <!-- 만들어 줬으면 urls.py에서 path를 만들어줘야함 -->
+    <!-- 근데 urls.py에서 app_name을 todos라고 지정했기 때문에 todos:create라고 해야함-->
+    <!-- form에서 create함수로 데이터를 넘겨줘야 함 -->
+    <!-- 그래서 input name에 이름을 content_로 지정해주고 -->
+    <!-- views 함수에 content_로 데이터가 전송됨 -->
+    <!-- 주의할 점: url 띄우고 url naming('todos:create') 적기 -->
+    <input type="text" name="content_" maxlength="10">
+    <!-- input:text하고 탭 누르면 <input type="text" name="" id=""> 나옴-->
+    <!-- maxlength는 프론트에서 글자가 10개까지만 쓸 수 있게 하는 것 -->
+    <!-- 프론트 엔드에서도 유효성 검사가 가능하므로 프론트와 백 둘다 검사 해야함-->
+    <!-- 백에서는 models.py에 max_length = 80가 같은 기능을 함 -->
+    <input type="submit" value="할 일 추가">
+  </form>
+
+  <hr>
+
+  <ul></ul>
+
+  <!-- DTL for문 사용법 -->
+  {% for todo in todos %}
+  <li>{{ todo.pk }} - {{ todo.content}} - {{ todo.completed}}
+    <!-- todo에 id와 content를 출력하려면 todo.id나 todo.content -->
+    <a href="{% url 'todos:delete' todo.pk%}">삭제</a>
+    <!-- delete 할때 todo의 pk(id)가 필요함 -->
+    <!-- pk 전달방법은 띄워써서 todo.pk -->
+    <!-- 그럼 동적인자(url을 변수사용하듯이 사용하는 기능)로 전달됨 -->
+  </li>
+  {% endfor %}
+  <!-- endfor를 사용해서 닫아줌 -->
+</body>
+
+</html>
